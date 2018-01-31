@@ -1,0 +1,128 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+.main-container {
+  height: 100%;
+}
+.navbar-brand img {
+  height: 100%;
+}
+.window {
+  height: 100%;
+}
+.window-inner {
+  height: 100%;
+  padding-top: 50px;
+  position: relative;
+}
+.window-inner .header {
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  left: 0;
+  width: 100%;
+}
+.main-window {
+  height: 100%;
+  overflow: hidden;
+}
+.main-window .content {
+  height: 100%;
+  padding-top: 50px;
+  overflow: auto;
+}
+.main-window .content .message-list {
+  padding-bottom: 4rem;
+}
+.message-input {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.message-input .form-group {
+  margin: 0;
+}
+.user-icon {
+  height: 3rem;
+}
+.media-left {
+  padding-left: 1rem;
+}
+.media-right {
+  padding-right: 1rem;
+}
+.message-content {
+  display: inline-block;
+  padding: 1rem;
+  margin: 0 4rem 5px 2rem;
+  background-color: skyblue;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+  position: relative;
+}
+.message-content.left::after {
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  border: 1rem solid transparent;
+  border-right: 1rem solid skyblue;
+  top: 1rem;
+  left: -2rem;
+}
+.message-content.right{
+  position: relative;
+  margin: 0 2rem 5px 4rem;
+}
+.message-content.right::after {
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  border: 1rem solid transparent;
+  border-left: 1rem solid skyblue;
+  top: 1rem;
+  right: -2rem;
+}
+.user-name {
+  width: 3rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* 圆环加载动画组件 */
+.media .cycle-circle {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  top: 1rem;
+  left: -3rem;
+}
+.circle-out {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: .5rem solid green;
+  border-left: .5rem solid transparent;
+}
+.cycle-circle.loading {
+  animation: cycle 1.5s infinite;
+}
+@keyframes cycle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.cycle-circle.error {
+  border: .5rem solid tomato;
+}
+.cycle-circle.success.loading {
+  display: none;
+}

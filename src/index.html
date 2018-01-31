@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+  <meta charset="utf-8" />
+  <meta httpequiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width initial-sacle=1 user-scalable=no" />
+  <title>chat</title>
+  <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container main-container">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-hearder">
+          <div class="navbar-brand">
+            <img src="../assets/user.png" alt="">
+          </div>
+        </div>
+        <p class="navbar-text navbar-right"><strong>web chat</strong></p>
+      </div>
+    </nav>
+    <div class="window" id="chat-window">
+      <div class="window-inner">
+        <div class="header">
+          <div class="panel clearfix">
+            <div class="user-count pull-left">
+              在线人数：<span id='current-count'>0</span>
+            </div>
+            <div class="current-status pull-right">
+              状态：<span>在线</span>
+            </div>
+          </div>
+        </div>
+        <div class="main-window">
+          <div class="content">
+            <div id="message-list" class="message-list media-list">
+              
+            </div>
+          </div>
+          <!-- 消息发布框 -->
+          <div class="message-input">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-btn">
+                  <div class="btn-group hidden-xs">
+                    <button class="btn btn-default" type="button" name="button">频道</button>
+                  </div>
+                  <div class="dropup btn-group">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" name="button">
+                      综合<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a>client</a></li>
+                      <li><a>web</a></li>
+                      <li><a>server</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <input id="push-msg" class="form-control" type="text" name="" value="">
+                <div class="input-group-btn">
+                  <button id="push-btn" class="btn btn-default" name="button"><span class="hidden-xs">提交</span><span class="visible-xs-inline glyphicon glyphicon-send"></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 登录框 -->
+  <div class="modal fade" id="login-box" data-backdrop="false" data-keyboard="false" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p>登录</p>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <div class="input-group">
+              <label for="set-name" class="input-group-addon">昵称</label>
+              <input id="set-name" class="form-control" type="text" name="" value="">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="login-btn" class="btn btn-default" name="button">进入</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
