@@ -5,6 +5,8 @@ web chat
 
 #### 动图效果预览
 
+![动图预览](https://chenc11211.github.io/WebChat/demo.gif)
+
 ## Build Setup
 
 ``` bash
